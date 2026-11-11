@@ -1,0 +1,237 @@
+/* Reseta margens, espaçamentos internos e define o box-sizing global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis globais para o Tema Escuro (Padrão) */
+:root {
+    --bg-primary: #0a0c10;
+    --bg-secondary: #161b22;
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --accent-color: #00e5ff;
+    --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --transition-speed: 0.3s;
+}
+
+/* Variáveis para o Tema Claro (aplicado via classe .light-mode no <body>) */
+body.light-mode {
+    --bg-primary: #f4f6f9;
+    --bg-secondary: #ffffff;
+    --text-primary: #1a1d20;
+    --text-secondary: #57606a;
+    --accent-color: #0066cc;
+    --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização global do corpo do site */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    /* Adiciona padding-bottom para o rodapé fixo não cobrir o conteúdo do site */
+    padding-bottom: 90px;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Estilização do cabeçalho */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    background-color: var(--bg-secondary);
+    border-bottom: 2px solid var(--accent-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Logotipo do site */
+.logo {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Container de botões da barra de ferramentas */
+.toolbar {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Estilos comuns para os botões da barra de acessibilidade */
+.tool-btn {
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--text-primary);
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all var(--transition-speed);
+}
+
+/* Efeito ao passar o mouse sobre os botões do cabeçalho */
+.tool-btn:hover {
+    background-color: var(--accent-color);
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* Seção de Banner Principal (Hero) */
+.hero {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--accent-color);
+}
+
+.hero p {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* LAYOUT RESPONSIVO: Container de Filmes usando CSS Grid (Mobile-First) */
+.movies-container {
+    display: grid;
+    /* Define grid de 1 coluna por padrão para celulares */
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilização dos Cards de Filme */
+.movie-card {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efeito ao passar o mouse sobre o Card */
+.movie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 229, 255, 0.2);
+}
+
+/* Imagem dos filmes */
+.movie-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Área de informações do filme dentro do card */
+.movie-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.movie-title {
+    font-size: 1.5rem;
+}
+
+.movie-meta {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.movie-synopsis {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* RODAPÉ FIXO NA TELA */
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-secondary);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 90;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Lista de ícones sociais */
+.social-links {
+    display: flex;
+    gap: 1.2rem;
+}
+
+/* Estilização base para ícones sociais no rodapé */
+.social-btn {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    transition: transform 0.3s ease, color 0.3s ease, filter 0.3s ease;
+}
+
+/* Efeitos visuais interativos ao passar o mouse nos ícones de redes sociais */
+.social-btn:hover {
+    /* Efeito de aumento (zoom) */
+    transform: scale(1.3) translateY(-3px);
+}
+
+/* Transição suave de cores e efeito de brilho (glow) específico por rede social */
+.social-btn.instagram:hover {
+    color: #e1306c;
+    filter: drop-shadow(0 0 8px #e1306c);
+}
+
+.social-btn.youtube:hover {
+    color: #ff0000;
+    filter: drop-shadow(0 0 8px #ff0000);
+}
+
+.social-btn.twitter:hover {
+    color: #1da1f2;
+    filter: drop-shadow(0 0 8px #1da1f2);
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE AUTOMÁTICA */
+
+/* Responsividade para Tablets (a partir de 600px) */
+@media (min-width: 600px) {
+    .movies-container {
+        /* Muda para 2 colunas em telas médias */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsividade para Desktops (a partir de 1024px) */
+@media (min-width: 1024px) {
+    .movies-container {
+        /* Muda para 3 colunas em telas grandes */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

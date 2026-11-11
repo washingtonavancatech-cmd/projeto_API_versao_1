@@ -1,0 +1,138 @@
+<!-- Define a versão do HTML utilizada (HTML5) -->
+<!DOCTYPE html>
+<!-- Tag raiz do documento com o idioma inicial definido como Português do Brasil -->
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação de caracteres como UTF-8 para suporte a acentos e caracteres especiais -->
+    <meta charset="UTF-8">
+    <!-- Configura a visualização para dispositivos móveis (design responsivo / mobile-first) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparece na aba do navegador -->
+    <title>Sci-Fi Cinema - Vitrine de Ficção Científica</title>
+    <!-- Importa a biblioteca Font Awesome para ícones de redes sociais e botões -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Importa o arquivo de estilos CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode"> <!-- Define o tema escuro como padrão inicial -->
+
+    <!-- Cabeçalho principal do site -->
+    <header class="header-container">
+        <!-- Título principal e logo do site -->
+        <h1 class="logo" data-pt="Sci-Fi Cinema" data-en="Sci-Fi Cinema">Sci-Fi Cinema</h1>
+        
+        <!-- Barra de ferramentas e acessibilidade no cabeçalho -->
+        <div class="toolbar">
+            <!-- Botão de alternância de idioma (Português / Inglês) -->
+            <button id="btn-lang" class="tool-btn" aria-label="Alternar idioma">
+                <i class="fa-solid fa-globe"></i> <span id="lang-text">EN</span>
+            </button>
+            
+            <!-- Botão para alternar entre Tema Escuro e Tema Claro -->
+            <button id="btn-theme" class="tool-btn" aria-label="Alternar tema">
+                <i id="theme-icon" class="fa-solid fa-sun"></i>
+            </button>
+            
+            <!-- Botão de Text-to-Speech (Leitura em voz alta do conteúdo) -->
+            <button id="btn-tts" class="tool-btn" aria-label="Ouvir texto da página">
+                <i class="fa-solid fa-volume-high"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Banner de apresentação da página -->
+    <section class="hero">
+        <!-- Título da seção principal com suporte a múltiplos idiomas -->
+        <h2 data-pt="Explores os Confins do Universo" data-en="Explore the Edge of the Universe">Explores os Confins do Universo</h2>
+        <!-- Descrição introdutória da vitrine -->
+        <p data-pt="Uma seleção imperdível dos maiores clássicos e obras-primas da ficção científica cinematográfica." data-en="A must-see selection of the greatest sci-fi movie classics and masterpieces.">Uma seleção imperdível dos maiores clássicos e obras-primas da ficção científica cinematográfica.</p>
+    </section>
+
+    <!-- Conteúdo principal onde os filmes serão exibidos em grade (Grid Responsivo) -->
+    <main class="movies-container">
+
+        <!-- Card de Filme 1: Interestelar -->
+        <article class="movie-card">
+            <!-- Imagem promocional do filme -->
+            <img src="https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=800&auto=format&fit=crop" alt="Cena do filme Interestelar mostrando astronautas e espaço" class="movie-img">
+            <!-- Informações textuais do filme -->
+            <div class="movie-info">
+                <!-- Título do filme -->
+                <h3 class="movie-title">Interstellar</h3>
+                <!-- Gênero e ano de lançamento -->
+                <span class="movie-meta" data-pt="2014 • Ficção Científica / Drama" data-en="2014 • Sci-Fi / Drama">2014 • Ficção Científica / Drama</span>
+                <!-- Sinopse detalhada do filme -->
+                <p class="movie-synopsis" data-pt="Uma equipe de exploradores viaja através de um buraco de minhoca no espaço na tentativa de garantir a sobrevivência da humanidade em um futuro distópico." data-en="A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival in a dystopian future.">Uma equipe de exploradores viaja através de um buraco de minhoca no espaço na tentativa de garantir a sobrevivência da humanidade em um futuro distópico.</p>
+            </div>
+        </article>
+
+        <!-- Card de Filme 2: Matrix -->
+        <article class="movie-card">
+            <!-- Imagem promocional do filme -->
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop" alt="Código verde caindo em tela preta representando o filme Matrix" class="movie-img">
+            <!-- Informações textuais do filme -->
+            <div class="movie-info">
+                <!-- Título do filme -->
+                <h3 class="movie-title">The Matrix</h3>
+                <!-- Gênero e ano de lançamento -->
+                <span class="movie-meta" data-pt="1999 • Ficção Científica / Ação" data-en="1999 • Sci-Fi / Action">1999 • Ficção Científica / Ação</span>
+                <!-- Sinopse detalhada do filme -->
+                <p class="movie-synopsis" data-pt="Um programador de computador descobre que a realidade como a conhecemos é uma simulação criada por máquinas inteligentes para dominar a raça humana." data-en="A computer programmer discovers that reality as we know it is a simulation created by intelligent machines to dominate the human race.">Um programador de computador descobre que a realidade como a conhecemos é uma simulação criada por máquinas inteligentes para dominar a raça humana.</p>
+            </div>
+        </article>
+
+        <!-- Card de Filme 3: Blade Runner 2049 -->
+        <article class="movie-card">
+            <!-- Imagem promocional do filme -->
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop" alt="Paisagem urbana futurista neon representando Blade Runner" class="movie-img">
+            <!-- Informações textuais do filme -->
+            <div class="movie-info">
+                <!-- Título do filme -->
+                <h3 class="movie-title">Blade Runner 2049</h3>
+                <!-- Gênero e ano de lançamento -->
+                <span class="movie-meta" data-pt="2017 • Ficção Científica / Cyberpunk" data-en="2017 • Sci-Fi / Cyberpunk">2017 • Ficção Científica / Cyberpunk</span>
+                <!-- Sinopse detalhada do filme -->
+                <p class="movie-synopsis" data-pt="Um novo blade runner descobre um segredo há muito enterrado que tem o potencial de mergulhar o que resta da sociedade no caos total." data-en="A new blade runner unearths a long-buried secret that has the potential to plunge what's left of society into chaos.">Um novo blade runner descobre um segredo há muito enterrado que tem o potencial de mergulhar o que resta da sociedade no caos total.</p>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Rodapé fixo da página -->
+    <footer class="footer-container">
+        <!-- Texto de Direitos Autorais -->
+        <p class="footer-text" data-pt="© 2026 Sci-Fi Cinema. Todos os direitos reservados." data-en="© 2026 Sci-Fi Cinema. All rights reserved.">© 2026 Sci-Fi Cinema. Todos os direitos reservados.</p>
+        
+        <!-- Redes Sociais com efeitos visuais -->
+        <div class="social-links">
+            <!-- Link para o Instagram com efeito CSS de zoom e brilho -->
+            <a href="#" class="social-btn instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <!-- Link para o YouTube com efeito CSS de zoom e brilho -->
+            <a href="#" class="social-btn youtube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <!-- Link para o Twitter/X com efeito CSS de zoom e brilho -->
+            <a href="#" class="social-btn twitter" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </footer>
+
+    <!-- INTEGRAÇÃO OFICIAL DO WIDGET DE ACESSIBILIDADE VLIBRAS -->
+    <!-- Div obrigatória onde a interface da linguagem de sinais VLibras será renderizada -->
+    <div vw class="enabled">
+        <!-- Elemento onde o avatar animado em Libras é carregado -->
+        <div vw-access-button class="active"></div>
+        <!-- Wrapper visual dos controles de acessibilidade do VLibras -->
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <!-- Carrega a biblioteca externa em JavaScript do VLibras diretamente dos servidores governamentais -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <!-- Script de inicialização do plugin VLibras -->
+    <script>
+        // Cria uma nova instância do componente acessível VLibras
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!-- Importa o arquivo externo de lógica em JavaScript Vanilla -->
+    <script src="script.js"></script>
+</body>
+</html>
